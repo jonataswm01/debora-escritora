@@ -3,6 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactCompiler: true,
   
+  // View Transitions API nativa (zero peso, máxima performance)
+  experimental: {
+    viewTransition: true,
+  },
+  
   // Otimização de imagens
   images: {
     formats: ["image/avif", "image/webp"],

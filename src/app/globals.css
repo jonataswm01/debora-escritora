@@ -163,3 +163,57 @@ html {
 .book-cover-image img {
   border-radius: 40px !important;
 }
+
+/* ============================================
+   VIEW TRANSITIONS API (Nativa do Browser)
+   ============================================ */
+
+/* Configuração da transição raiz - fade suave entre páginas */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+}
+
+/* Página saindo - fade out */
+::view-transition-old(root) {
+  animation-name: fade-out-transition;
+}
+
+/* Página entrando - fade in */
+::view-transition-new(root) {
+  animation-name: fade-in-transition;
+}
+
+/* Animação de fade out */
+@keyframes fade-out-transition {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Animação de fade in */
+@keyframes fade-in-transition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opcional: Manter navbar fixa durante transição (sem fade) */
+@supports (view-transition-name: navbar) {
+  nav {
+    view-transition-name: navbar;
+  }
+  
+  ::view-transition-old(navbar),
+  ::view-transition-new(navbar) {
+    animation: none;
+    mix-blend-mode: normal;
+  }
+}

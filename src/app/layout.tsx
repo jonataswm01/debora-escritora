@@ -19,6 +19,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Débora Rayane - Escritora",
   description: "Site oficial da escritora Débora Rayane. Ficção e Romance Young Adult.",
+  other: {
+    'view-transition': 'same-origin',
+  },
 };
 
 export default function RootLayout({

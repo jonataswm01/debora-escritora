@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import ContactHero from "@/components/contato/ContactHero";
 import ContactForm from "@/components/contato/ContactForm";
 import ContactInfo from "@/components/contato/ContactInfo";
@@ -7,6 +8,7 @@ import ContactFooter from "@/components/contato/ContactFooter";
 export default function ContatoPage() {
   return (
     <main className="min-h-screen">
+      <Navbar />
       <ContactHero />
       <ContactForm />
       <ContactInfo />

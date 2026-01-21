@@ -67,7 +67,7 @@ export default function ContactHero() {
 
       <section
         ref={heroRef}
-        className="relative min-h-[70vh] flex items-center justify-center py-20 lg:py-32 overflow-hidden"
+        className="relative min-h-[70vh] flex items-center justify-center pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden"
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">

@@ -46,7 +46,7 @@ export default function Navbar() {
             {/* Links de Navegação - Desktop */}
             <div className="hidden md:flex items-center gap-6">
               <Link
-                href="#sobre"
+                href="/#sobre"
                 className="relative text-sm font-inter font-medium text-foreground/80 transition-colors duration-300 group"
               >
                 <span className="relative">
@@ -55,7 +55,7 @@ export default function Navbar() {
                 </span>
               </Link>
               <Link
-                href="#livros"
+                href="/#livros"
                 className="relative text-sm font-inter font-medium text-foreground/80 transition-colors duration-300 group"
               >
                 <span className="relative">
@@ -64,7 +64,7 @@ export default function Navbar() {
                 </span>
               </Link>
               <Link
-                href="#blog"
+                href="/#blog"
                 className="relative text-sm font-inter font-medium text-foreground/80 transition-colors duration-300 group"
               >
                 <span className="relative">
@@ -125,21 +125,21 @@ export default function Navbar() {
         >
           <div className="p-8 space-y-6">
             <Link
-              href="#sobre"
+              href="/#sobre"
               onClick={closeMenu}
               className="block text-center text-base font-inter font-medium text-foreground/80 hover:text-[#B898C8] transition-colors py-2"
             >
               Sobre
             </Link>
             <Link
-              href="#livros"
+              href="/#livros"
               onClick={closeMenu}
               className="block text-center text-base font-inter font-medium text-foreground/80 hover:text-[#B898C8] transition-colors py-2"
             >
               Livros
             </Link>
             <Link
-              href="#blog"
+              href="/#blog"
               onClick={closeMenu}
               className="block text-center text-base font-inter font-medium text-foreground/80 hover:text-[#B898C8] transition-colors py-2"
             >

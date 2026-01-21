@@ -168,40 +168,45 @@ html {
    VIEW TRANSITIONS API (Nativa do Browser)
    ============================================ */
 
-/* Configuração da transição raiz - fade suave entre páginas */
+/* Configuração da transição raiz - fade suave e elegante entre páginas */
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation-duration: 0.3s;
-  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* Smooth easing */
 }
 
-/* Página saindo - fade out */
+/* Página saindo - fade out com leve movimento pra baixo */
 ::view-transition-old(root) {
   animation-name: fade-out-transition;
 }
 
-/* Página entrando - fade in */
+/* Página entrando - fade in com leve movimento de baixo pra cima */
 ::view-transition-new(root) {
   animation-name: fade-in-transition;
+  animation-delay: 0.1s; /* Pequeno delay para suavizar */
 }
 
-/* Animação de fade out */
+/* Animação de fade out - página saindo */
 @keyframes fade-out-transition {
   from {
     opacity: 1;
+    transform: translateY(0);
   }
   to {
     opacity: 0;
+    transform: translateY(-10px);
   }
 }
 
-/* Animação de fade in */
+/* Animação de fade in - página entrando */
 @keyframes fade-in-transition {
   from {
     opacity: 0;
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 

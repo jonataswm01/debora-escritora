@@ -32,7 +32,7 @@ export default function Navbar() {
             border border-white/20
             shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]
             transition-all duration-300
-            ${mobileMenuOpen ? "bg-white/95" : scrolled ? "bg-white/85" : "bg-white/70"}
+            ${mobileMenuOpen ? "bg-white/95" : scrolled ? "bg-white/90" : "bg-white/80"}
           `}
         >
           <div className="flex items-center justify-between md:gap-8">
